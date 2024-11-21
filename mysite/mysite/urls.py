@@ -16,8 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include("polls.urls")),
+    path('admin/', admin.site.urls),  # For admin panel
+    path('', include('polls.urls')),  # Delegate routing to polls app
 ]
