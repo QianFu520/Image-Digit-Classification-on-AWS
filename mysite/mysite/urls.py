@@ -15,12 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.shortcuts import redirect
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', lambda request: redirect('home/', permanent=True)),  # Redirect root to 'home/'
-    path('', include('polls.urls')),
-]
-path('', include('polls.urls')),  # Delegate routing to polls app
+    path('', include("polls.urls")),
 ]
