@@ -45,8 +45,7 @@ def uploading(request):
 def predicting(path_to_file):
     data = imageprepare(path_to_file)
 
-    model_path = os.path.abspath("models/baseline.h5")
-    model = load_model(model_path, compile=False)
+    model = load_model('mysite/polls/baseline.h5', compile=False)
     result = np.argmax(model.predict(data), axis=-1)
     return result
 
