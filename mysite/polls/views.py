@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from tensorflow.keras.models import load_model
 import numpy as np
+import os
 
 from .preprocessing import imageprepare
 from .forms import ImageForm
@@ -43,7 +44,9 @@ def uploading(request):
 
 def predicting(path_to_file):
     data = imageprepare(path_to_file)
-    model = load_model("models/baseline.h5", compile=False)
+
+    model_path = os.path.abspath("models/baseline.h5")
+    model = load_model(model_path, compile=False)
     result = np.argmax(model.predict(data), axis=-1)
     return result
 
