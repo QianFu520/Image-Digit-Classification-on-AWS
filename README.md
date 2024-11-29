@@ -63,12 +63,46 @@ Access the application at: http://127.0.0.1:8000/home
 
 ## Deployment on AWS
 **1. Launch an EC2 Instance**
-
-- Use an Ubuntu AMI.
+- Use an **Ubuntu** AMI.
 - Open inbound rules for:
-   - Port 22 (SSH)
-   - Port 8000 (Application)
-   - Optional: Port 80/443 for production with Nginx.
+   - Port **22** (SSH)
+   - Port **8000** (Application)
+   - Optional: Port **80/443** for production with Nginx.
+**2. Transfer Files**
+Transfer your project to the EC2 instance using SCP:
+```bash
+scp -i <path-to-your-key.pem> -r <project-directory> ubuntu@<ec2-public-ip>:/home/ubuntu
+```
+
+**3. Set Up the EC2 Instance**
+- SSH into the instance:
+```bash
+ssh -i <path-to-your-key.pem> ubuntu@<ec2-public-ip>
+```
+- Install dependencies:
+```bash
+sudo apt update
+sudo apt install python3-pip python3-venv
+```
+- Set up the virtual environment:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+**4. Collect Static Files**
+```bash
+python manage.py collectstatic
+```
+
+**5. Run the Application**
+Start the app with Gunicorn:
+```bash
+gunicorn --bind 0.0.0.0:8000 mysite.wsgi
+```
+Access the app using: http://<ec2-public-ip>:8000/home
+
 
 
 
