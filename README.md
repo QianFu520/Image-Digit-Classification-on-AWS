@@ -30,10 +30,6 @@ A web application that classifies handwritten digits using a Convolutional Neura
  git clone https://github.com/QianFu520/image-digit-classification.git
  cd image-digit-classification
 
-**3. Clone the Repository**
-  ```bash
- python3 -m venv venv
- source venv/bin/activate
 
 
 
