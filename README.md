@@ -1,14 +1,39 @@
 # Image Digit Classification on AWS
- This project implements a digit classification model based on the MNIST dataset. Users can upload an image of a handwritten digit, and the app will classify it in real-time using a CNN model deployed on AWS.
+A web application that classifies handwritten digits using a Convolutional Neural Network (CNN). The project is deployed on an AWS EC2 instance with Django and TensorFlow, allowing users to upload images and receive real-time predictions.
 ## Features
-- Web-based UI: Upload and classify handwritten digits via an interactive dashboard.
-- Machine Learning Model: Uses TensorFlow to classify images.
-- AWS Hosting: Fully hosted on an AWS EC2 instance.
+- Upload an image of a handwritten digit to classify.
+- Real-time predictions powered by a CNN model.
+- User-friendly interface built with Django.
+- Deployed on AWS EC2 for scalability and accessibility.
 ## Technologies Used
-- Django
-- TensorFlow
-- AWS EC2
-- Gunicorn & Nginx
+- **Frontend and Backend**:Django
+- **Machine Learning**:TensorFlow(CNN)
+- **Deployment**:AWS EC2
+- **Production**:Gunicorn & Nginx
+- **Other tools**: Git, Python, Pillow
+## Project Workflow
+1. **Preprocessing**: Images are preprocessed before being fed into the CNN model for predictions.
+2. **Model**: A CNN model trained on the MNIST dataset for digit recognition.
+3. **Deployment**:
+      - Configured on an AWS EC2 instance.
+      - Managed using Gunicorn (application server) and Nginx (reverse proxy).
+## Installation and Setup
+**1. Prerequisites**
+    - Python 3.10+
+    - Virtual Environment (venv)
+    - AWS EC2 instance
+    - SSH key pair for secure access
+    - Git installed on your local machine
+**2. Clone the Repository**
+```bash
+git clone https://github.com/QianFu520/image-digit-classification.git
+cd image-digit-classification
+
+**2. Clone the Repository**
+
+
+
+
 ## Setup
 1. Clone the repository:
    ```bash
