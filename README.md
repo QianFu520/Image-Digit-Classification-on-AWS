@@ -136,6 +136,13 @@ image-digit-classification/
 - **Local Access**: http://127.0.0.1:8000/home
 - **Deployed App**: `http://<ec2-public-ip>:8000/home`
 
+## Future Improvements
+- Integrate HTTPS with Let's Encrypt.
+- Add Docker support for containerized deployment.
+- Enhance UI for better user experience.
+
+## License
+This project is licensed under the MIT License.
 
 
 
