@@ -11,13 +11,14 @@
 - Gunicorn & Nginx
 ## Setup
 1. Clone the repository:
+   ```bash
    git clone https://github.com/QianFu520/image-digit-classification.git
-2. Create a virtual enviroment:
+3. Create a virtual enviroment:
    python3 -m venv venv
    source venv/bin/activate
-3. Install dependencies:
+4. Install dependencies:
    pip install -r requirements.txt
-4. Run the development server:
+5. Run the development server:
    python manage.py runserver
 ## Deployment Stpes
 
