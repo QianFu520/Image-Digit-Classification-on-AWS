@@ -27,15 +27,21 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("Django_Key")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 flagVar = True
 
 # Override default port for `runserver` command
 # runserver.default_port = "8080"
 
 # Insert localhost and server.
-ALLOWED_HOSTS = ['127.0.0.1', os.environ.get("DNS_address"),
-                 os.environ.get("IP_address")]
+ALLOWED_HOSTS = [
+    '127.0.0.1', 
+    os.getenv("DNS_address"), 
+    os.getenv("IP_address"), 
+    '18.212.9.49',  # Add your EC2 public IP
+    'localhost'
+]
+
 
 
 # Application definition
@@ -130,6 +136,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+print(STATIC_ROOT)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -138,4 +146,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/images/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'polls/images')
+
 
