@@ -134,7 +134,7 @@ image-digit-classification/
 ```
 ## Usage
 - **Local Access**: http://127.0.0.1:8000/home
-- **Deployed App**: http://<ec2-public-ip>:8000/home
+- **Deployed App**: `http://<ec2-public-ip>:8000/home`
 
 
 
