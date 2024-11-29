@@ -104,7 +104,7 @@ Start the app with Gunicorn:
 ```bash
 gunicorn --bind 0.0.0.0:8000 mysite.wsgi
 ```
-Access the app using: http://<your-ec2-public-ip>:8000/home
+Access the app using: `http://<your-ec2-public-ip>:8000/home`
 
 **6. Optional: Nginx for Production**
 
