@@ -70,6 +70,7 @@ Access the application at: http://127.0.0.1:8000/home
    - Optional: Port **80/443** for production with Nginx.
      
 **2. Transfer Files**
+
 Transfer your project to the EC2 instance using SCP:
 ```bash
 scp -i <path-to-your-key.pem> -r <project-directory> ubuntu@<ec2-public-ip>:/home/ubuntu
@@ -104,6 +105,15 @@ Start the app with Gunicorn:
 gunicorn --bind 0.0.0.0:8000 mysite.wsgi
 ```
 Access the app using: http://<ec2-public-ip>:8000/home
+
+**6. Optional: Nginx for Production**
+
+Set up Nginx as a reverse proxy for production:
+1. Install Nginx:
+```bash
+sudo apt install nginx
+```
+2. Configure Nginx to forward requests to Gunicorn.
 
 
 
