@@ -49,9 +49,9 @@ touch .env
 ```
 - Add the following variables:
 ```makefile
-Django_Key=<your-django-secret-key>
-IP_address=<your-ec2-public-ip>
-DNS_address=<your-ec2-dns-address>
+Django_Key=your-secret-key-here
+IP_address=your-ec2-public-ip
+DNS_address=your-ec2-dns-address
 ```
 
 **6. Run the Application Locally**
