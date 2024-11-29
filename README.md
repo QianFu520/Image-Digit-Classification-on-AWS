@@ -68,6 +68,7 @@ Access the application at: http://127.0.0.1:8000/home
    - Port **22** (SSH)
    - Port **8000** (Application)
    - Optional: Port **80/443** for production with Nginx.
+     
 **2. Transfer Files**
 Transfer your project to the EC2 instance using SCP:
 ```bash
@@ -97,6 +98,7 @@ python manage.py collectstatic
 ```
 
 **5. Run the Application**
+
 Start the app with Gunicorn:
 ```bash
 gunicorn --bind 0.0.0.0:8000 mysite.wsgi
