@@ -31,6 +31,25 @@ A web application that classifies handwritten digits using a Convolutional Neura
  cd image-digit-classification
 ```
 
+**3. Create and Activate a Virtual Environment**
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+**4. Install Dependencies**
+```bash
+pip install -r requirements.txt
+```
+
+**5. Add Environment Variables**
+- Create a .env file in your project directory:
+```bash
+touch .env
+```
+
+
+
 
 
 
