@@ -19,31 +19,20 @@ A web application that classifies handwritten digits using a Convolutional Neura
       - Managed using Gunicorn (application server) and Nginx (reverse proxy).
 ## Installation and Setup
 **1. Prerequisites**
-    - Python 3.10+
-    - Virtual Environment (venv)
-    - AWS EC2 instance
-    - SSH key pair for secure access
-    - Git installed on your local machine
+- Python 3.10+
+- Virtual Environment (venv)
+- AWS EC2 instance
+- SSH key pair for secure access
+- Git installed on your local machine
 **2. Clone the Repository**
 ```bash
 git clone https://github.com/QianFu520/image-digit-classification.git
 cd image-digit-classification
 
-**2. Clone the Repository**
 
 
 
 
-## Setup
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/QianFu520/image-digit-classification.git
-3. Create a virtual enviroment:
-   python3 -m venv venv
-   source venv/bin/activate
-4. Install dependencies:
-   pip install -r requirements.txt
-5. Run the development server:
-   python manage.py runserver
-## Deployment Stpes
+
+
 
