@@ -55,6 +55,13 @@ DNS_address=your-ec2-dns-address
 ```
 
 **6. Run the Application Locally**
+```bash
+python manage.py runserver
+```
+
+Access the application at: http://127.0.0.1:8000/home
+
+## Deployment on AWS
 
 
 
