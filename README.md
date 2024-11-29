@@ -104,7 +104,7 @@ Start the app with Gunicorn:
 ```bash
 gunicorn --bind 0.0.0.0:8000 mysite.wsgi
 ```
-Access the app using: http://<ec2-public-ip>:8000/home
+Access the app using: http://<your-ec2-public-ip>:8000/home
 
 **6. Optional: Nginx for Production**
 
@@ -114,6 +114,26 @@ Set up Nginx as a reverse proxy for production:
 sudo apt install nginx
 ```
 2. Configure Nginx to forward requests to Gunicorn.
+
+## Folder Structure
+```arduino
+image-digit-classification/
+├── mysite/
+│   ├── settings.py
+│   ├── urls.py
+│   ├── wsgi.py
+│   ├── static/
+│   ├── templates/
+│   └── polls/
+│       ├── views.py
+│       ├── urls.py
+│       ├── models.py
+│       └── templates/
+├── requirements.txt
+└── README.md
+```
+## Usage
+
 
 
 
