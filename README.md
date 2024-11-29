@@ -24,11 +24,8 @@ A web application that classifies handwritten digits using a Convolutional Neura
 - AWS EC2 instance
 - SSH key pair for secure access
 - Git installed on your local machine
-- 
-**2. Clone the Repository**
-```bash
-git clone https://github.com/QianFu520/image-digit-classification.git
-cd image-digit-classification
+
+
 
 
 
